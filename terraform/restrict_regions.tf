@@ -1,6 +1,7 @@
 data "aws_organizations_organization" "org" {}
 
 resource "aws_organizations_policy" "deny_non_approved_regions" {
+  provider = aws.aft_management
   name        = "deny-non-approved-regions rlanda"
   description = "Permitir solo us-east-1 y us-west-2"
 
