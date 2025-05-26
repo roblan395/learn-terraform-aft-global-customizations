@@ -1,7 +1,7 @@
 data "aws_organizations_organization" "org" {}
 
 resource "aws_organizations_policy" "deny_non_approved_regions" {
-  name        = "deny-non-approved-regions"
+  name        = "deny-non-approved-regions rlanda"
   description = "Permitir solo us-east-1 y us-west-2"
 
   content = jsonencode({
